@@ -2,32 +2,35 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-black text-white py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-indigo-600">
+    <section className="min-h-screen bg-[#2C3E50] text-white py-16" id='about'>
+      <div className="container mx-auto px-6 lg:px-12">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-indigo-500">
           About Me
         </h2>
 
         <div className="flex flex-col md:flex-row items-center">
           {/* Profile Image */}
-          <div className="w-48 h-48 md:w-64 md:h-64 mb-6 md:mb-0 mx-auto md:mx-0">
+          <div className="w-52 h-52 md:w-72 md:h-72 mb-8 md:mb-0 mx-auto md:mx-0 relative">
             <img
               src="https://i.pinimg.com/736x/46/51/fe/4651feff0ccd56050dcbcee60813118a.jpg"
               alt="Profile"
-              className="rounded-full shadow-lg w-full h-full object-cover"
+              className="rounded-full shadow-xl w-full h-full object-cover border-4 border-indigo-600"
             />
+            <div className="absolute inset-0 rounded-full border-2 border-indigo-300 opacity-60"></div>
           </div>
 
           {/* Text Content */}
-          <div className="md:w-2/3 md:pl-10 text-center md:text-left">
-            <h3 className="text-2xl font-semibold mb-4">Hi, I'm [Your Name]</h3>
-            <p className="text-lg sm:text-xl mb-4 leading-relaxed">
+          <div className="md:w-3/5 md:pl-12 text-center md:text-left">
+            <h3 className="text-3xl font-semibold mb-6">
+              Hi, I'm [Your Name]
+            </h3>
+            <p className="text-lg sm:text-xl leading-relaxed mb-5 text-gray-300">
               I’m a passionate developer who enjoys building beautiful and
               functional web applications. With a strong background in frontend
-              technologies like React, JavaScript, and Tailwind CSS, I always
-              strive to create seamless user experiences.
+              technologies like React, JavaScript, and Tailwind CSS, I strive to
+              create seamless user experiences.
             </p>
-            <p className="text-lg sm:text-xl mb-6 leading-relaxed">
+            <p className="text-lg sm:text-xl leading-relaxed mb-8 text-gray-300">
               My journey into web development started with curiosity about how
               websites are made, and since then, I've been continuously learning
               and improving my skills. I enjoy collaborating with teams, solving
@@ -35,10 +38,10 @@ const About = () => {
             </p>
 
             {/* Button */}
-            <div className="mt-6">
+            <div className="mt-8">
               <a
                 href="#"
-                className="bg-indigo-600 text-white py-2 px-6 rounded-lg hover:bg-indigo-500 transition duration-300 inline-block text-sm sm:text-base"
+                className="bg-indigo-600 text-white py-3 px-8 rounded-full font-medium hover:bg-indigo-500 transition duration-300 shadow-md text-base sm:text-lg"
               >
                 Download My Resume
               </a>

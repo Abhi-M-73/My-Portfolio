@@ -29,29 +29,32 @@ const projects = [
 
 const Experience = () => {
   return (
-    <section className="min-h-screen bg-black py-16" id='experience'>
+    <section className="min-h-screen bg-black py-16" id="experience">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-indigo-600">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-indigo-500">
           Project Experience
         </h2>
 
         <div className="relative">
-          <div className="border-l-4 border-indigo-600 absolute h-full left-8 md:left-1/2"></div>
+          <div className="border-l-4 border-indigo-500 absolute h-full left-1/2 transform -translate-x-1/2"></div>
 
           {/* Project Items */}
           {projects.map((project, index) => (
-            <div key={index} className={`mb-12 flex ${index % 2 === 0 ? 'flex-col md:flex-row' : 'flex-col md:flex-row-reverse'}`}>
-              <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'} flex justify-end`}>
-                <div className="bg-white p-6 rounded-lg shadow-lg w-full md:w-9/12">
-                  <h3 className="text-xl font-semibold text-indigo-600">{project.title}</h3>
-                  <p className="text-gray-700 font-semibold">{project.role}</p>
-                  <span className="block text-sm text-gray-500 mb-4">{project.duration}</span>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+            <div
+              key={index}
+              className={`mb-12 flex ${index % 2 === 0 ? 'flex-col md:flex-row' : 'flex-col md:flex-row-reverse'}`}
+            >
+              <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'} flex justify-${index % 2 === 0 ? 'end' : 'start'}`}>
+                <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg w-full md:w-9/12 transition-transform transform hover:scale-105">
+                  <h3 className="text-2xl font-semibold text-indigo-400 mb-2">{project.title}</h3>
+                  <p className="text-gray-300 font-semibold mb-1">{project.role}</p>
+                  <span className="block text-sm text-gray-400 mb-4">{project.duration}</span>
+                  <p className="text-gray-200 mb-4">{project.description}</p>
                   <div className="flex flex-wrap space-x-2">
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm"
+                        className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm"
                       >
                         {tech}
                       </span>
@@ -61,8 +64,8 @@ const Experience = () => {
               </div>
 
               {/* Timeline Dot */}
-              <div className="w-0 md:w-1/12 relative">
-                <span className="absolute w-6 h-6 bg-indigo-600 rounded-full left-2 md:left-1/2 -ml-3 mt-2 md:ml-0"></span>
+              <div className="w-0 md:w-1/12 relative flex justify-center items-center">
+                <span className="absolute w-6 h-6 bg-indigo-500 rounded-full"></span>
               </div>
             </div>
           ))}

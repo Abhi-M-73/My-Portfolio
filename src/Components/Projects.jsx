@@ -2,74 +2,70 @@ import React from 'react';
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A brief description of what the project does and what problem it solves.",
-    techStack: ["React", "TailwindCSS", "API"],
-    githubLink: "https://github.com/yourusername/project1",
-    liveDemoLink: "https://project1demo.com",
+    title: "E-Commerce Platform",
+    description: "Developed a fully responsive e-commerce platform using React, Redux, and Tailwind CSS.",
+    techStack: ["React", "Redux", "Tailwind CSS", "Firebase"],
+    githubLink: "https://github.com/yourusername/ecommerce",
+    liveDemoLink: "https://ecommerce-demo.com",
+    image: "https://via.placeholder.com/400x200?text=E-Commerce+Platform"
   },
   {
-    title: "Project 2",
-    description: "A brief description of another project showcasing more of your skills.",
-    techStack: ["Node.js", "Express", "MongoDB"],
-    githubLink: "https://github.com/yourusername/project2",
-    liveDemoLink: "https://project2demo.com",
+    title: "Social Media App",
+    description: "Built a social media application with real-time messaging and post-sharing.",
+    techStack: ["React", "Node.js", "MongoDB", "Socket.io"],
+    githubLink: "https://github.com/yourusername/social-media",
+    liveDemoLink: "https://social-media-demo.com",
+    image: "https://via.placeholder.com/400x200?text=Social+Media+App"
   },
-  // Add more projects as needed
+  // Add more projects with images as needed
 ];
 
 const Projects = () => {
   return (
-    <section className="min-h-screen bg-black py-16" id='projecs'>
+    <section className="min-h-screen py-16 bg-[url(https://i.pinimg.com/736x/90/fc/20/90fc20c585d6f1c28b92f53d0282e915.jpg)] bg-no-repeat bg-cover bg-fixed bg-center"  id="projects">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-indigo-600">
+        <h2 className="text-4xl font-bold text-center mb-12 text-indigo-400">
           My Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300"
+              className="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-600">
-                {project.title}
-              </h3>
-              <p className="text-gray-700 mb-4">
-                {project.description}
-              </p>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-62 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-indigo-400">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  {project.description}
+                </p>
 
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-600">Tech Stack:</h4>
-                <ul className="flex flex-wrap mt-2">
-                  {project.techStack.map((tech, i) => (
-                    <li
-                      key={i}
-                      className="bg-indigo-100 text-indigo-600 px-2 py-1 rounded-md text-sm mr-2 mb-2"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
-              <div className="flex justify-between items-center">
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-800 transition duration-300"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.liveDemoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition duration-300"
-                >
-                  Live Demo
-                </a>
+                <div className="flex justify-between items-center mt-4">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-400 hover:text-indigo-200 transition duration-300"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={project.liveDemoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition duration-300"
+                  >
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
           ))}

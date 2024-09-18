@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section className="bg-gray-900 text-white min-h-screen flex items-center justify-center py-20">
+    <section className="bg-[url(https://i.pinimg.com/736x/d8/8c/53/d88c53387bdf35e5a4cad228f1a5d2bd.jpg)] bg-no-repeat bg-cover bg-fixed bg-center text-white min-h-screen flex items-center justify-center py-20" id='home'>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Hero Text */}
         <h1 className="text-4xl sm:text-6xl font-bold mb-6">
