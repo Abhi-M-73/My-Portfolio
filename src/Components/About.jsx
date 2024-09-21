@@ -22,12 +22,12 @@ const About = () => {
           {/* Text Content */}
           <div className="md:w-3/5 md:pl-12 text-center md:text-left">
             <h3 className="text-3xl font-semibold mb-6">
-              Hi, I'm [Your Name]
+              Hello, My name is <span className='text-indigo-600'>Abhishek Maddheshiya</span>
             </h3>
             <p className="text-lg sm:text-xl leading-relaxed mb-5 text-gray-300">
               I’m a passionate developer who enjoys building beautiful and
               functional web applications. With a strong background in frontend
-              technologies like React, JavaScript, and Tailwind CSS, I strive to
+              technologies like HTML , CSS, React, JavaScript, and Tailwind CSS, GSAP , Framer Motion And backend technologies like Node, Express, MongoDB. I strive to
               create seamless user experiences.
             </p>
             <p className="text-lg sm:text-xl leading-relaxed mb-8 text-gray-300">

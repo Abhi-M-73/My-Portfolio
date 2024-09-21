@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaFacebookSquare, FaInstagramSquare } from 'react-icons/fa';
+import { FaLinkedin, FaSquareGithub } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -12,21 +14,31 @@ const Home = () => {
           A Passionate Developer Creating Impactful Digital Experiences
         </p>
 
+        {/* social media icon */}
+        <div className='flex gap-5 items-center justify-center text-3xl mt-5 mb-6'>
+          <a href='https://github.com/Abhi-M-73/'><FaSquareGithub className='hover:scale-110 transition-all ease-in' /></a>
+          <a href="https://www.linkedin.com/in/abhishek-maddheshiya-a041752b7/"><FaLinkedin className='hover:scale-110 transition-all ease-in'/></a>
+          <a href="https://www.instagram.com/theonly.abhiii_/"><FaInstagramSquare className='hover:scale-110 transition-all ease-in' /></a>
+          <a href="https://www.facebook.com/abhishek.madheshiya.90/"><FaFacebookSquare className='hover:scale-110 transition-all ease-in' /></a>
+        </div>
+
         {/* Call to Action Buttons */}
         <div className="flex justify-center space-x-4">
           <a
             href="#projects"
-            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg transition duration-300 text-lg"
+            className="bg-indigo-600 hover:bg-indigo-500 text-white hover:bg-transparent border-indigo-600 hover:text-indigo-600 hover:border px-5 py-2 rounded-lg transition duration-300 text-lg"
           >
             View Projects
           </a>
           <a
             href="#contact"
-            className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-lg transition duration-300 text-lg"
+            className="border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-5 py-2 rounded-lg transition duration-300 text-lg"
           >
             Contact Me
           </a>
         </div>
+
+        
       </div>
     </section>
   );

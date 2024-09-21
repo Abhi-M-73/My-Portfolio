@@ -29,7 +29,7 @@ const projects = [
 
 const Experience = () => {
   return (
-    <section className="min-h-screen bg-black py-16" id="experience">
+    <section className="min-h-screen bg-black py-16 bg-[url(https://i.pinimg.com/564x/f6/f4/ac/f6f4ac565c03752acc3d3834cd6afc8c.jpg)] bg-no-repeat bg-cover bg-fixed bg-center" id="experience">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-indigo-500">
           Project Experience
