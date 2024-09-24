@@ -12,8 +12,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="p-5 bg-[#333] text-white fixed w-full top-0 z-50 shadow-2xl">
-        <nav className="flex justify-between items-center px-10">
+      <header className="py-5 bg-[#333] text-white fixed w-full top-0 z-50 shadow-2xl">
+        <nav className="flex justify-between items-center md:px-10 px-5">
           <h1 className="text-xl font-bold">Visual Designer</h1>
 
           {/* Desktop Menu */}
